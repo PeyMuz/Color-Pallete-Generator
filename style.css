@@ -33,3 +33,67 @@ h1{
     position: relative;
     padding-bottom: 0.5rem;
 }
+
+h1::after{
+    content: ""; /*Use this to show in the web page*/
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: #667eea;
+    border-radius: 2px;
+}
+
+#generate-btn{
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500px;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+
+#generate-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(102, 126, 234, 0.3);
+}
+
+#generate-btn:active{
+    transform: translateY(0);
+}
+
+.palette-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.color-box {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transfrom 0.2s;
+}
+
+.color-box:hover {
+    transform: translateY(-5px);
+}
+
+.color{
+    height: 120px;
+    cursor: pointer;
+}
+
+.color-info{
+    background-color: #fff;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
