@@ -96,4 +96,26 @@ h1::after{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.hex-value{
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.copy-btn{
+    cursor: pointer;
+    color: #64748b;
+    transition: color 0.2s;
+}
+
+.copy-btn:hover{
+    color: #667eea;
+}
+
+@media(max-width:768px){
+   .palette-container{
+     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+   }
 }
